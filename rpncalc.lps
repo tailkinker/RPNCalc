@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="rpncalc.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit>
+      <Unit>
+        <Filename Value="fcalc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmCalculator"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="71"/>
+        <CursorPos Y="108"/>
+        <UsageCount Value="27"/>
+        <Bookmarks Count="1">
+          <Item0 Y="295" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/share/lazarus/3.4.0/lcl/interfaces/gtk2/gtk2widgetset.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos Y="44"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="169" TopLine="132"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="171" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="173" TopLine="136"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="175" TopLine="138"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="176" TopLine="139"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="177" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="181" TopLine="144"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="172" TopLine="137"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="32" Column="5"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="252" TopLine="109"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="181" Column="10" TopLine="142"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="176" Column="18" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="135" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="251" TopLine="221"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="159" Column="36" TopLine="137"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="286" Column="31" TopLine="248"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="145" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="146" Column="31" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="160" Column="14" TopLine="120"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="297" Column="18" TopLine="256"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="291" Column="45" TopLine="269"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="46" Column="16" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="47" Column="3" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="64" Column="8" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="147" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="148" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="149" TopLine="125"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="32" Column="26"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="327" TopLine="285"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="317" Column="19" TopLine="285"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="s"/>
+      </Item>
+      <Item>
+        <Expression Value="Pi"/>
+      </Item>
+    </Watches>
+  </Debugging>
+</CONFIG>

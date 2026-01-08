@@ -1,0 +1,63 @@
+object frmCalculator: TfrmCalculator
+  Left = 507
+  Height = 299
+  Top = 115
+  Width = 450
+  AutoSize = True
+  Caption = 'RPN Calculator'
+  ClientHeight = 299
+  ClientWidth = 450
+  DesignTimePPI = 110
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object lstStack: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 92
+    Top = 8
+    Width = 434
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 8
+    ItemHeight = 0
+    TabOrder = 1
+    TopIndex = -1
+  end
+  object txtEntry: TEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = lstStack
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 37
+    Top = 108
+    Width = 434
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 8
+    Font.Height = 24
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+    OnKeyPress = KeyPress
+  end
+  object panKeyGrid: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = txtEntry
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 8
+    Height = 138
+    Top = 153
+    Width = 434
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 8
+    TabOrder = 2
+  end
+end
