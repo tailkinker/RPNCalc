@@ -9,7 +9,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos Y="23"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -19,11 +19,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="321"/>
-        <CursorPos X="12" Y="358"/>
-        <UsageCount Value="27"/>
+        <TopLine Value="110"/>
+        <CursorPos X="49" Y="142"/>
+        <UsageCount Value="28"/>
         <Bookmarks Count="1">
-          <Item0 Y="362" ID="1"/>
+          <Item0 Y="375" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -37,10 +37,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="fcalc.pas"/>
-        <Caret Line="181" TopLine="144"/>
-      </Position>
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="172" TopLine="137"/>
@@ -156,6 +152,10 @@
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="139" Column="3" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="172" Column="33" TopLine="136"/>
       </Position>
     </JumpHistory>
     <RunParams>

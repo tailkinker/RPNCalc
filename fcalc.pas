@@ -46,6 +46,7 @@ type
   private
     t_buttonWidth : integer;
     t_buttonHeight : integer;
+    t_fontHeight : integer;
     angles : byte;
     t_stack : array of double;
     PrimedToExit : boolean;
@@ -80,10 +81,10 @@ const
     ('', '', '', '', '', '', '', '')
   );
   BUTTON_TYPE : array [0..4, 0..7] of integer = (
-    ( 0, 0, 0, 0, 2, 1, 1, 1),
-    ( 0, 0, 0, 0, 0, 1, 1, 1),  // 0 is a function button
+    ( 0, 0, 0, 5, 2, 1, 1, 1),
+    ( 0, 0, 0, 0, 4, 1, 1, 1),  // 0 is a function button
     ( 0, 0, 0, 0, 0, 1, 1, 1),  // 1 is a numeric entry button
-    ( 1, 0, 0, 0, 0, 1, 1, 1),  // 2 is the Enter button
+    ( 1, 3, 3, 3, 0, 1, 1, 1),  // 2 is the Enter button
     ( 0, 0, 0, 0, 0, 0, 0, 0)   // This row is not displayed;  for expansion
   );
 
@@ -138,6 +139,7 @@ begin
 
   t_buttonWidth := 3 * Screen.PixelsPerInch div 4;
   t_buttonHeight := 1 * Screen.PixelsPerInch div 2;
+  t_fontHeight := 1 * Screen.PixelsPerInch div 5;
 
   for r := 0 to 3 do
     for c := 0 to 7 do begin
@@ -154,14 +156,25 @@ begin
       btn.Caption := BUTTON_CAPS[r,c];
       btn.Tag := r * 8 + c;  // unique identifier
       btn.TabStop := FALSE;
+      btn.Font.Height := t_fontHeight;
 
       // Assign event handlers
       case BUTTON_TYPE[r,c] of
-        0: btn.OnClick := @btnOperatorClick;
         1: btn.OnClick := @btnNumberClick;
         2: btn.OnClick := @btnEnterClick;
+      else
+        btn.OnClick := @btnOperatorClick;
       end;
 
+      // Assign colours
+      case BUTTON_TYPE[r,c] of
+        0 : btn.Color := clSilver;
+        1 : btn.Color := clWhite;
+        2 : btn.Color := clMoneyGreen;
+        3 : btn.Color := clSkyBlue;
+        4 : btn.Color := $CCCCFF;
+        5 : btn.Color := clGray;
+      end;
       Buttons[c,r] := btn;
     end;
   PrimedToExit := FALSE
