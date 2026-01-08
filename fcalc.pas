@@ -40,6 +40,7 @@ type
     procedure btnEnterClick(Sender: TObject);
     procedure btnNumberClick(Sender: TObject);
     procedure btnOperatorClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure KeyPress(Sender: TObject; var Key: char);
   private
@@ -55,7 +56,6 @@ type
     procedure FocusEntry;
   public
     Buttons : array [0..7, 0..4] of tButton;
-
   end;
 
 var
@@ -64,7 +64,7 @@ var
 implementation
 
 uses
-  math;
+  math, inifiles;
 
 const
   BUTTON_CAPS : array[0..4, 0..7] of string = (
@@ -91,14 +91,51 @@ const
 
 { TfrmCalculator }
 
+function GetConfigDir: string;
+begin
+  if GetEnvironmentVariable('XDG_CONFIG_HOME') <> '' then
+    Result := IncludeTrailingPathDelimiter(GetEnvironmentVariable('XDG_CONFIG_HOME'))
+  else
+    Result := IncludeTrailingPathDelimiter(GetEnvironmentVariable('HOME')) + '.config/';
+  Result := Result + 'rpncalc/'; // final config dir
+  if not DirectoryExists(Result) then
+    CreateDir(Result);
+end;
+
+procedure TfrmCalculator.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+var
+  ini: TIniFile;
+begin
+  ini := TIniFile.Create(GetConfigDir + 'rpncalc.ini');
+  try
+    ini.WriteInteger('Window', 'Left', Left);
+    ini.WriteInteger('Window', 'Top', Top);
+    ini.WriteInteger('Window', 'Width', Width);
+    ini.WriteInteger('Window', 'Height', Height);
+  finally
+    ini.Free;
+  end;
+end;
+
 procedure TfrmCalculator.FormCreate(Sender: TObject);
 var
+  ini: TIniFile;
   r, c: Integer;
   btn: TButton;
   extrapadding : integer;
 const
   padding = 8;
 begin
+  ini := TIniFile.Create(GetConfigDir + 'rpncalc.ini');
+  try
+    Left := ini.ReadInteger('Window', 'Left', Left);
+    Top := ini.ReadInteger('Window', 'Top', Top);
+    Width := ini.ReadInteger('Window', 'Width', Width);
+    Height := ini.ReadInteger('Window', 'Height', Height);
+  finally
+    ini.Free;
+  end;
+
   t_buttonWidth := 3 * Screen.PixelsPerInch div 4;
   t_buttonHeight := 1 * Screen.PixelsPerInch div 2;
 

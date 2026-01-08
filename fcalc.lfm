@@ -8,6 +8,7 @@ object frmCalculator: TfrmCalculator
   ClientHeight = 299
   ClientWidth = 450
   DesignTimePPI = 110
+  OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object lstStack: TListBox
