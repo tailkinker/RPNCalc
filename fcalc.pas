@@ -47,6 +47,7 @@ type
     t_buttonHeight : integer;
     angles : byte;
     t_stack : array of double;
+    PrimedToExit : boolean;
     procedure Push (Value : double);
     function Pop: Double;
     procedure UpdateStackDisplay;
@@ -126,11 +127,17 @@ begin
 
       Buttons[c,r] := btn;
     end;
+  PrimedToExit := FALSE
 end;
 
 procedure TfrmCalculator.KeyPress(Sender: TObject; var Key: char);
 begin
   case Key of
+    #27 :
+      if (PrimedToExit) then
+        Close
+      else
+        PrimedToExit := TRUE;
     '0'..'9', '.':
       txtEntry.Text := txtEntry.Text + Key;  // same as btnNumberClick
     #8:  // Backspace
@@ -146,9 +153,10 @@ begin
       btnOperation (10);
     '/' : // /
       btnOperation (11);
-  else
-    Exit;
   end;
+
+  if (key <> #27) then
+      PrimedToExit := FALSE;
 
   FocusEntry;
   Key := #0; // prevent further processing
