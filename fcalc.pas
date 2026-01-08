@@ -298,16 +298,16 @@ begin
     10 : // -
       if (StackLen >= 2) then
         begin
-          a := Pop;
           b := Pop;
+          a := Pop;
           a := a - b;
           Push (a);
         end;
     11 : // /
       if (StackLen >= 2) then
         begin
-          a := Pop;
           b := Pop;
+          a := Pop;
           if (b = 0) then
             Error := 'Not A Number'
           else
@@ -354,8 +354,8 @@ begin
     20 : // y^x
       if (StackLen >= 1) then
         begin
-          a := Pop;
           b := Pop;
+          a := Pop;
           a := exp (ln (b) * a);
           Push (a);
         end;
@@ -370,8 +370,8 @@ begin
         begin
           a := Pop;
           b := Pop;
-          Push (b);
           Push (a);
+          Push (b);
         end;
     27 : // Drop
       if (StackLen >= 1) then
