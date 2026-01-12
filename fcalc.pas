@@ -27,7 +27,7 @@ unit fcalc;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, Types;
 
 type
 
@@ -43,6 +43,8 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure KeyPress(Sender: TObject; var Key: char);
+    procedure lstStackDrawItem(Control: TWinControl; Index: Integer;
+      ARect: TRect; State: TOwnerDrawState);
   private
     t_buttonWidth : integer;
     t_buttonHeight : integer;
@@ -65,7 +67,7 @@ var
 implementation
 
 uses
-  math, inifiles;
+  lcltype, math, inifiles;
 
 const
   BUTTON_CAPS : array[0..4, 0..7] of string = (
@@ -127,6 +129,7 @@ var
 const
   padding = 8;
 begin
+  lstStack.Style := lbOwnerDrawFixed;
   ini := TIniFile.Create(GetConfigDir + 'rpncalc.ini');
   try
     Left := ini.ReadInteger('Window', 'Left', Left);
@@ -188,8 +191,11 @@ begin
         Close
       else
         PrimedToExit := TRUE;
-    '0'..'9', '.':
+    '0'..'9':
       txtEntry.Text := txtEntry.Text + Key;  // same as btnNumberClick
+    '.':
+      if (Pos('.', txtEntry.Text) = 0) then
+        txtEntry.Text := txtEntry.Text + '.';
     #8:  // Backspace
       if Length(txtEntry.Text) > 0 then
         txtEntry.Text := Copy(txtEntry.Text, 1, Length(txtEntry.Text) - 1);
@@ -212,6 +218,41 @@ begin
   Key := #0; // prevent further processing
 end;
 
+procedure TfrmCalculator.lstStackDrawItem(Control: TWinControl; Index: Integer;
+  ARect: TRect; State: TOwnerDrawState);
+var
+  s: string;
+  wText: Integer;
+  numberStr: string;
+  padding: Integer;
+  displayIndex: Integer;
+begin
+  s := lstStack.Items[Index];
+
+  // --- Background ---
+  if odSelected in State then
+    lstStack.Canvas.Brush.Color := clHighlight
+  else
+    lstStack.Canvas.Brush.Color := lstStack.Color;
+  lstStack.Canvas.FillRect(ARect);
+
+  // --- Reversed line number (last item = #1) ---
+  displayIndex := lstStack.Items.Count - Index;
+  numberStr := IntToStr(displayIndex) + '. ';
+
+  // --- Text width ---
+  wText := lstStack.Canvas.TextWidth(s);
+
+  // Optional padding between number and text
+  padding := 4;
+
+  // --- Draw number on the left ---
+  lstStack.Canvas.TextOut(ARect.Left, ARect.Top, numberStr);
+
+  // --- Draw text right-aligned ---
+  lstStack.Canvas.TextOut(ARect.Right - wText - 2, ARect.Top, s);
+end;
+
 procedure TfrmCalculator.btnEnterClick(Sender: TObject);
 begin
   Push (StrToFloat (txtEntry.Text));
@@ -226,9 +267,12 @@ begin
   s := TButton(Sender).Caption;
   if (TButton(Sender).Tag = 24) then // Pi button pressed
     txtEntry.Text := FloatToStr (Pi)
-  else if (TButton(Sender).Tag = 31) then // ± button pressed
-    txtEntry.Text := FloatToStr (-StrToFloat (txtEntry.Text))
-  else
+  else if (TButton(Sender).Tag = 31) then begin // ± button pressed
+    if (txtEntry.Text = '') then
+      txtEntry.Text := '0'
+    else
+      txtEntry.Text := FloatToStr (-StrToFloat (txtEntry.Text))
+  end else
     KeyPress (Sender, s [1]);
   FocusEntry;
 end;

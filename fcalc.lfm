@@ -23,8 +23,10 @@ object frmCalculator: TfrmCalculator
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 8
     ItemHeight = 0
+    ParentFont = False
     TabOrder = 1
     TopIndex = -1
+    OnDrawItem = lstStackDrawItem
   end
   object txtEntry: TEdit
     AnchorSideLeft.Control = Owner
@@ -36,6 +38,7 @@ object frmCalculator: TfrmCalculator
     Height = 37
     Top = 108
     Width = 434
+    Alignment = taRightJustify
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 8
     Font.Height = 24
