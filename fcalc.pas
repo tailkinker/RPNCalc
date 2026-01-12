@@ -409,7 +409,7 @@ begin
           Push (a);
         end;
     20 : // y^x
-      if (StackLen >= 1) then
+      if (StackLen >= 2) then
         begin
           a := Pop;
           b := Pop;
