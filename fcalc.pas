@@ -413,7 +413,11 @@ begin
         begin
           a := Pop;
           b := Pop;
-          a := exp (ln (b) * a);
+//          if (b <= 0) then
+//            Error := 'Logarithm undefined for x < 0'
+//          else
+//            a := exp (ln (b) * a);
+          a := Power (b, a);
           Push (a);
         end;
     25 : // Dup
