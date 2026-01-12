@@ -7,7 +7,8 @@
       <Unit>
         <Filename Value="rpncalc.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="3"/>
         <CursorPos Y="23"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
@@ -18,8 +19,9 @@
         <ComponentName Value="frmCalculator"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="220"/>
-        <CursorPos Y="255"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="470"/>
+        <CursorPos X="12" Y="415"/>
         <UsageCount Value="29"/>
         <Bookmarks Count="1">
           <Item0 Y="419" ID="1"/>
@@ -29,15 +31,13 @@
       </Unit>
       <Unit>
         <Filename Value="/usr/share/lazarus/3.4.0/lcl/interfaces/gtk2/gtk2widgetset.inc"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos Y="44"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="145" TopLine="123"/>
@@ -149,10 +149,6 @@
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="230" Column="16" TopLine="208"/>
-      </Position>
-      <Position>
-        <Filename Value="fcalc.pas"/>
-        <Caret Line="70" Column="12" TopLine="130"/>
       </Position>
       <Position>
         <Filename Value="fcalc.pas"/>

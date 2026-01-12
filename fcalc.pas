@@ -411,8 +411,8 @@ begin
     20 : // y^x
       if (StackLen >= 1) then
         begin
-          b := Pop;
           a := Pop;
+          b := Pop;
           a := exp (ln (b) * a);
           Push (a);
         end;
