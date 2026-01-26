@@ -76,9 +76,9 @@ const
     // Row 1
     ('×', '+', '-', '÷', 'Clear', '4', '5', '6'),
     // Row 2
-    ('x²', '√x', 'ln', 'log', 'y^x', '1', '2', '3'),
+    ('y²', '√y', 'ln', 'log', 'x^y', '1', '2', '3'),
     // Row 3
-    ('π', 'Dup', 'Swap', 'Drop', '1/x', '0', '.', '±'),
+    ('π', 'Dup', 'Swap', 'Drop', '1/y', '0', '.', '±'),
     // Row 4
     ('', '', '', '', '', '', '', '')
   );
@@ -224,8 +224,8 @@ var
   s: string;
   wText: Integer;
   numberStr: string;
-  padding: Integer;
   displayIndex: Integer;
+  displayChar : char;
 begin
   s := lstStack.Items[Index];
 
@@ -238,13 +238,17 @@ begin
 
   // --- Reversed line number (last item = #1) ---
   displayIndex := lstStack.Items.Count - Index;
-  numberStr := IntToStr(displayIndex) + '. ';
+//  numberStr := IntToStr(displayIndex) + '. ';
+  if (displayIndex < 26) then
+    displayChar := Chr(90 - displayIndex)
+  else
+    displayChar := #32;
+  numberStr := displayChar;
+  if (displayChar <> #32) then
+    numberStr := numberStr + ': ';
 
   // --- Text width ---
   wText := lstStack.Canvas.TextWidth(s);
-
-  // Optional padding between number and text
-  padding := 4;
 
   // --- Draw number on the left ---
   lstStack.Canvas.TextOut(ARect.Left, ARect.Top, numberStr);

@@ -20,11 +20,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="394"/>
-        <CursorPos X="27" Y="416"/>
+        <TopLine Value="220"/>
+        <CursorPos Y="227"/>
         <UsageCount Value="29"/>
         <Bookmarks Count="1">
-          <Item0 Y="422" ID="1"/>
+          <Item0 Y="426" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -38,10 +38,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="fcalc.pas"/>
-        <Caret Line="145" TopLine="123"/>
-      </Position>
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="146" Column="31" TopLine="123"/>
@@ -157,6 +153,10 @@
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="420" Column="22" TopLine="396"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="248" Column="35" TopLine="219"/>
       </Position>
     </JumpHistory>
     <RunParams>
