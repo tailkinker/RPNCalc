@@ -10,7 +10,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="3"/>
         <CursorPos Y="23"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -20,11 +20,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="220"/>
-        <CursorPos Y="227"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="157"/>
+        <CursorPos X="33" Y="179"/>
+        <UsageCount Value="30"/>
         <Bookmarks Count="1">
-          <Item0 Y="426" ID="1"/>
+          <Item0 Y="429" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -38,18 +38,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="fcalc.pas"/>
-        <Caret Line="146" Column="31" TopLine="123"/>
-      </Position>
-      <Position>
-        <Filename Value="fcalc.pas"/>
-        <Caret Line="160" Column="14" TopLine="120"/>
-      </Position>
-      <Position>
-        <Filename Value="fcalc.pas"/>
-        <Caret Line="297" Column="18" TopLine="256"/>
-      </Position>
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="291" Column="45" TopLine="269"/>
@@ -157,6 +145,18 @@
       <Position>
         <Filename Value="fcalc.pas"/>
         <Caret Line="248" Column="35" TopLine="219"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="244" Column="21" TopLine="214"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="245" Column="41" TopLine="224"/>
+      </Position>
+      <Position>
+        <Filename Value="fcalc.pas"/>
+        <Caret Line="179" Column="32" TopLine="153"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -29,15 +29,16 @@ object frmCalculator: TfrmCalculator
     OnDrawItem = lstStackDrawItem
   end
   object txtEntry: TEdit
-    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Control = labX
+    AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = lstStack
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 8
+    Left = 40
     Height = 37
     Top = 108
-    Width = 434
+    Width = 402
     Alignment = taRightJustify
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 8
@@ -63,5 +64,18 @@ object frmCalculator: TfrmCalculator
     AutoSize = True
     BorderSpacing.Around = 8
     TabOrder = 2
+  end
+  object labX: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = txtEntry
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 29
+    Top = 112
+    Width = 24
+    BorderSpacing.Around = 8
+    Caption = 'X:'
+    Font.Height = 24
+    ParentFont = False
   end
 end

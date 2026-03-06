@@ -34,6 +34,7 @@ type
   { TfrmCalculator }
 
   TfrmCalculator = class(TForm)
+    labX: TLabel;
     panKeyGrid: TPanel;
     txtEntry: TEdit;
     lstStack: TListBox;
@@ -226,6 +227,8 @@ var
   numberStr: string;
   displayIndex: Integer;
   displayChar : char;
+const
+  aLabel = 'YZABCDEFGHIJKLMNOPQRSTUVWX';
 begin
   s := lstStack.Items[Index];
 
@@ -239,8 +242,8 @@ begin
   // --- Reversed line number (last item = #1) ---
   displayIndex := lstStack.Items.Count - Index;
 //  numberStr := IntToStr(displayIndex) + '. ';
-  if (displayIndex < 26) then
-    displayChar := Chr(90 - displayIndex)
+  if (displayIndex < length (aLabel)) then
+    displayChar := aLabel [displayIndex]
   else
     displayChar := #32;
   numberStr := displayChar;
