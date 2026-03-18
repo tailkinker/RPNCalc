@@ -1,23 +1,19 @@
 {
-  This file is part of RPNCalc, Copyright (c) 2026 Timothy Groves
+    RPNCalc - A Reverse Polish Notation calculator.
+    Copyright (C) 2026 Timothy Groves
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 }
 
 unit fcalc;
@@ -72,15 +68,10 @@ uses
 
 const
   BUTTON_CAPS : array[0..4, 0..7] of string = (
-    // Row 0
     ('sin', 'cos', 'tan', 'deg', 'Enter', '7', '8', '9'),
-    // Row 1
     ('×', '+', '-', '÷', 'Clear', '4', '5', '6'),
-    // Row 2
     ('y²', '√y', 'ln', 'log', 'x^y', '1', '2', '3'),
-    // Row 3
     ('π', 'Dup', 'Swap', 'Drop', '1/y', '0', '.', '±'),
-    // Row 4
     ('', '', '', '', '', '', '', '')
   );
   BUTTON_TYPE : array [0..4, 0..7] of integer = (
