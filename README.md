@@ -1,6 +1,7 @@
 # RPNCalc
 
 **A fast, lightweight Reverse Polish Notation calculator built with Lazarus and Free Pascal.**
+![RPNCalc Screenshot]rpncalc.png
 
 RPNCalc is a desktop calculator designed for users who prefer the efficiency of RPN (postfix notation). By eliminating the need for parentheses, it allows for faster complex calculations and provides a clear view of the evaluation stack.
 
